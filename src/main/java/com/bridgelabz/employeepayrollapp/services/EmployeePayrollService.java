@@ -9,6 +9,10 @@ import java.util.List;
 @Service
 public class EmployeePayrollService implements IEmployeePayrollService {
 
+    /*
+    Use Case 3 Ability for service layer to store the employee payroll data.
+    We store data in a memory as a List.
+     */
     private List<EmployeePayrollData> employeePayrollList = new ArrayList<EmployeePayrollData>();
     @Override
     public List<EmployeePayrollData> getEmployeePayrollData() {
