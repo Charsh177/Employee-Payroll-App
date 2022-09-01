@@ -1,11 +1,12 @@
 package com.bridgelabz.employeepayrollapp;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /*
-Use case 1 Created Employee Payroll Spring Project to cater to
-REST Request from Employee Payroll UI
+Use case 4 Lombok library added to auto generate
+Getter and Setter for DTO
  */
 @SpringBootApplication
 public class EmployeePayrollAppApplication {
