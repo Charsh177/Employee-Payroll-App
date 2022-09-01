@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /*
-Use case 4 Lombok library added to auto generate
+SECTION3 Use case 1 Lombok library added to auto generate
 Getter and Setter for DTO
  */
 @SpringBootApplication
