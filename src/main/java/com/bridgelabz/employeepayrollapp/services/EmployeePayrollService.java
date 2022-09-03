@@ -13,22 +13,24 @@ public class EmployeePayrollService implements IEmployeePayrollService {
     Use Case 3 Ability for service layer to store the employee payroll data.
     We store data in a memory as a List.
      */
-    private List<EmployeePayrollData> employeePayrollList = new ArrayList<EmployeePayrollData>();
+
+    private List<EmployeePayrollData> employeePayrollDataList = new ArrayList<EmployeePayrollData>();
+
     @Override
     public List<EmployeePayrollData> getEmployeePayrollData() {
-        return employeePayrollList;
+       return employeePayrollDataList;
     }
 
     @Override
     public EmployeePayrollData getEmployeePayrollDataById(int empId) {
-        return employeePayrollList.get(empId - 1);
+       return employeePayrollDataList.get(empId - 1);
     }
 
     @Override
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
         EmployeePayrollData employeePayrollData = null;
         employeePayrollData = new EmployeePayrollData(1, employeePayrollDTO);
-        employeePayrollList.add(employeePayrollData);
+        employeePayrollDataList.add(employeePayrollData);
         return employeePayrollData;
     }
 
@@ -37,12 +39,12 @@ public class EmployeePayrollService implements IEmployeePayrollService {
         EmployeePayrollData employeePayrollData = this.getEmployeePayrollDataById(empId);
         employeePayrollData.setName(employeePayrollDTO.name);
         employeePayrollData.setSalary(employeePayrollDTO.salary);
-        employeePayrollList.set(empId - 1, employeePayrollData);
+        employeePayrollDataList.set(empId - 1, employeePayrollData);
         return employeePayrollData;
     }
 
     @Override
     public void deleteEmployeePayrollData(int empId) {
-        employeePayrollList.remove(empId - 1);
+        employeePayrollDataList.remove(empId - 1);
     }
 }
